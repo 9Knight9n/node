@@ -147,7 +147,7 @@ TEST(ExtractLane) {
   CodeDesc desc;
   masm->GetCode(isolate, &desc);
   Handle<Code> code =
-      Factory::CodeBuilder(isolate, desc, CodeKind::STUB).Build();
+      Factory::CodeBuilder(isolate, desc, CodeKind::FOR_TESTING).Build();
 #ifdef DEBUG
   StdoutStream os;
   code->Print(os);
@@ -278,7 +278,7 @@ TEST(ReplaceLane) {
   CodeDesc desc;
   masm->GetCode(isolate, &desc);
   Handle<Code> code =
-      Factory::CodeBuilder(isolate, desc, CodeKind::STUB).Build();
+      Factory::CodeBuilder(isolate, desc, CodeKind::FOR_TESTING).Build();
 #ifdef DEBUG
   StdoutStream os;
   code->Print(os);
